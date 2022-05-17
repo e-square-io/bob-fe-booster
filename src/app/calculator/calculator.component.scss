@@ -1,0 +1,22 @@
+:host {
+  //display: flex;
+  outline: solid 1px green;
+}
+.calculator{
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+}
+.num{
+  width: 100px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.name {
+  background-color: red
+}
+
+button {
+  border-radius: 4px;
+  background: white;
+}

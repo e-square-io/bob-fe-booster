@@ -1,0 +1,21 @@
+.name{
+  background: yellow;
+}
+:host{
+  display: grid;
+  grid-template:
+    "nav-bar nav-bar" 40px
+    "side-bar body" 1fr
+  / 100px 1fr
+;
+  height: 100vh;
+  app-nav-bar{
+    grid-area: nav-bar;
+  }
+  app-side-bar{
+    grid-area: side-bar;
+  }
+  .body{
+    grid-area: body;
+  }
+}

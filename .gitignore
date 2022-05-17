@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/yonatan
 /tmp
 /out-tsc
 /bazel-out

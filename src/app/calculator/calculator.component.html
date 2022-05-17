@@ -1,0 +1,17 @@
+<div class="name">{{name + ''+result}}</div>
+<div class="calculator">
+  <div class="num {{'cls-'+num}}"
+       [id]="num"
+       *ngFor="let num of numbers"
+       (click)="result =result+num"
+  >{{num}}</div>
+</div>
+<button (click)="$event.preventDefault(); name = 'Clicked!';name = inputName.value">Click</button>
+<input [type]="inputType" #inputName (keyup)="onKeyUp($event,result)">
+<div class="result">{{result}}</div> <span (click)="result = 0">🆑</span>
+<div class="password">
+
+  <input [type]="passwordType" [(ngModel)]="user.password"
+  ><button (click)="togglePassword()">See</button>
+</div>
+{{user|json}}
