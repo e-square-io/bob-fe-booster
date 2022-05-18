@@ -1,0 +1,22 @@
+<p class="none" [class.is-open]="isOpen">Opened</p>
+<p [style.color]="'purple'">purple</p>
+<p class="counter" [ngClass]="classObj">Counter: {{ count }}</p>
+<p class="counter" [ngStyle]="styleObj">Counter: {{ count }}</p>
+
+<p>Another Counter: {{ anotherCount }}</p>
+
+<p>Another Counter Counter: {{ getAnotherAnotherCount() }}</p>
+
+<button (click)="onIncrement()">Increment</button>
+<button (click)="onDecrement()">Decrement</button>
+
+<app-counter-item></app-counter-item>
+ 
+<button (click)="showTemplate = !showTemplate">Toggle Template</button>
+<div *ngIf="showTemplate; else myTemplate">
+  <h1>No template yet</h1>
+</div>
+
+<ng-template #myTemplate>
+  <h1>NG TEMPLATE</h1>
+</ng-template>

@@ -1,0 +1,26 @@
+:host-context(.light-theme) {
+  .counter {
+    color: white;
+  }
+}
+
+.counter {
+  color: white;
+  background-color: grey;
+}
+
+.color-red {
+  color: red;
+}
+
+.p-5 {
+  padding: 30px;
+}
+
+.none {
+  display: none;
+}
+
+.is-open {
+  display: block;
+}

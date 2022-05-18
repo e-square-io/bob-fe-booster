@@ -1,0 +1,41 @@
+<div *ngIf="card" (mouseenter)="onMouseenter()">
+  <h2 *appPermission="'view:card'">{{ card.title }}</h2>
+
+  <!--
+  <ng-template [appPermission]="'view:card-title'">
+    <h2>{{ card.title }}</h2>
+  </ng-template>
+  -->
+  <p>{{ card.description }}</p>
+  <div [ngSwitch]="card.type">
+    <div *ngSwitchCase="'facebook'">
+      <h4>Facebook</h4>
+    </div>
+    <div *ngSwitchCase="'twitter'">
+      <h4>Twitter</h4>
+    </div>
+    <div *ngSwitchDefault>
+      <h4>None</h4>
+    </div>
+  </div>
+</div>
+
+<!--
+<ng-template [ngIf]="card">
+  <div (mouseenter)="onMouseenter()">
+    <h2>{{ card.title }}</h2>
+    <p>{{ card.description }}</p>
+    <div [ngSwitch]="card.type">
+      <div *ngSwitchCase="'facebook'">
+        <h4>Facebook</h4>
+      </div>
+      <div *ngSwitchCase="'twitter'">
+        <h4>Twitter</h4>
+      </div>
+      <div *ngSwitchDefault>
+        <h4>None</h4>
+      </div>
+    </div>
+  </div>
+</ng-template>
+-->

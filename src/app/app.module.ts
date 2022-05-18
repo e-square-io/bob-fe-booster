@@ -6,16 +6,23 @@ import {FormsModule} from "@angular/forms";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 
+import { CounterModule } from './counter/counter.module';
+import { CardModule } from './card/card.module';
+import { HighlightModule } from './highlight/highlight.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     CalculatorComponent,
-    SideBarComponent
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CounterModule,
+    CardModule,
+    HighlightModule
   ],
   providers: [],
   bootstrap: [AppComponent]

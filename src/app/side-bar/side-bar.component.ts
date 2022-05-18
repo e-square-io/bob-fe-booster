@@ -12,4 +12,9 @@ export class SideBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  hello() {
+    console.log('hello');
+    
+  }
 }

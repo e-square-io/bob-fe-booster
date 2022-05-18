@@ -1,6 +1,22 @@
 <app-nav-bar></app-nav-bar>
-<app-side-bar></app-side-bar>
-<div class="body">
+<app-side-bar #sidebar></app-side-bar>
+<div class="body"  (click)="sidebar.hello()">
+
+  <div appHighlight>
+    <p>Highlight Directive</p>
+  </div>
+  <div appHighlight color="blue">
+    <p>Highlight Directive</p>
+  </div>
+
+  
 
   <app-calculator></app-calculator>
+
+  <app-card [card]="card" (cardHover)="onCardHover($event)"></app-card>
+
+  
+  <app-counter [count]="5" (countChange)="onCountChange($event)"></app-counter>
+
+  <app-counter [count]="outsideCount"></app-counter>
 </div>
