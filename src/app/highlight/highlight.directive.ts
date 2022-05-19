@@ -5,14 +5,16 @@ import { Directive, ElementRef, HostBinding, HostListener, Inject, Input, Render
 })
 export class HighlightDirective {
   @Input() color = 'yellow';
+  @Input() bColor?:string;
 
   @HostBinding('style.backgroundColor') bg = 'inherit';
+  @HostBinding('style.background') background = 'inherit';
 
   @HostListener('mouseenter') onMouseover() {
-    this.bg = this.color;    
+    this.background = this.bColor || this.color;
 
     console.log(this.elementRef.nativeElement);
-    
+
     const a = this.renderer.createElement('a');
 
     const text = this.renderer.createText('hello');
@@ -36,9 +38,9 @@ export class HighlightDirective {
 
   @HostListener('mouseleave', ['$event']) onMouseleave(event: MouseEvent) {
     console.log(event);
-    
-    this.bg = 'inherit';  
-    
+
+    this.background = 'inherit';
+
     if (this.aElement) {
       this.renderer.removeChild(this.elementRef.nativeElement, this.aElement);
 
@@ -48,7 +50,7 @@ export class HighlightDirective {
 
   @HostListener('document:click', ['$event']) onDocumentClick(event: MouseEvent) {
     console.log('document click', event);
-  
+
   }
 
 }

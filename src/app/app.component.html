@@ -1,22 +1,26 @@
 <app-nav-bar></app-nav-bar>
 <app-side-bar #sidebar></app-side-bar>
-<div class="body"  (click)="sidebar.hello()">
+<div class="body" (click)="sidebar.hello()">
+<!--  <button (click)="someToggle = !someToggle">{{who}}</button>-->
 
-  <div appHighlight>
-    <p>Highlight Directive</p>
-  </div>
-  <div appHighlight color="blue">
-    <p>Highlight Directive</p>
-  </div>
+  <app-feed></app-feed>
 
-  
+  <!--  <ng-container *ngIf="someToggle">-->
+<!--    <div class="name">-->
+<!--      <div id="yonatan">{{name}}</div>-->
 
-  <app-calculator></app-calculator>
+<!--    </div>-->
+<!--  </ng-container>-->
 
-  <app-card [card]="card" (cardHover)="onCardHover($event)"></app-card>
 
-  
-  <app-counter [count]="5" (countChange)="onCountChange($event)"></app-counter>
+  <!--  <div appHighlight [bColor]="someBackground">-->
+  <!--    <p>Highlight Directive</p>-->
+  <!--  </div>-->
+  <!--  -->
+  <!--  <app-card [card]="card" (cardHover)="onCardHover($event)"></app-card>-->
 
-  <app-counter [count]="outsideCount"></app-counter>
+
+  <!--  <app-counter [count]="5" (countChange)="onCountChange($event)"></app-counter>-->
+
+  <!--  <app-counter [count]="outsideCount"></app-counter>-->
 </div>

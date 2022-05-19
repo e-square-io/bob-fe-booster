@@ -1,0 +1,26 @@
+:host {
+
+  outline: solid 1px green;
+  width: 40px;
+  max-height: 90vh;
+
+  .product-list {
+    max-height: 80vh;
+    overflow: auto;
+
+    .product {
+      padding: 10px;
+      .name {
+        color: darkblue;
+      }
+
+      .img {
+        img {
+
+          height: 100px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:yonatan": "ng serve -o --port=8080",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

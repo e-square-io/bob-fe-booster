@@ -9,6 +9,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { CounterModule } from './counter/counter.module';
 import { CardModule } from './card/card.module';
 import { HighlightModule } from './highlight/highlight.module';
+import {FeedModule} from "./feed/feed.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HighlightModule } from './highlight/highlight.module';
     FormsModule,
     CounterModule,
     CardModule,
-    HighlightModule
+    HighlightModule,
+    FeedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

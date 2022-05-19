@@ -1,0 +1,11 @@
+<div class="total">Total: {{products.length}}</div>
+
+
+<div class="product-list">
+
+  <app-prodcut *ngFor="let product of products"
+               [product]="product">
+
+  </app-prodcut>
+
+</div>
