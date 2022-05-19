@@ -1,0 +1,13 @@
+  <div class="title">Branch List</div>
+<div class="list">
+
+
+  <ng-container *ngIf="isRead">
+    <app-branch *ngFor="let branch of branches" [branch]="branch"></app-branch>
+
+  </ng-container>
+</div>
+<div class="preview">
+  <app-branch-preview></app-branch-preview>
+</div>
+

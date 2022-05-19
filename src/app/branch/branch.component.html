@@ -1,2 +1,9 @@
-<p>branch works!</p>
-{{label}}
+<ng-container *ngIf="branch">
+
+  <button mat-button (click)="onClick()">
+    <div class="name">{{branch.name|uppercase}}</div>
+    <div class="address">{{branch.address|address}}</div>
+
+  </button>
+  <div class="line" [class.current]="branch === current"></div>
+</ng-container>

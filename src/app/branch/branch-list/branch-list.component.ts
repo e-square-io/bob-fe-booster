@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {BranchService} from "../branch.service";
+import {Component, OnInit} from '@angular/core';
+import {BranchService} from "../service/branch.service";
+import {IBranch} from "../branch.interface";
 
 @Component({
   selector: 'app-branch-list',
@@ -7,14 +8,20 @@ import {BranchService} from "../branch.service";
   styleUrls: ['./branch-list.component.scss']
 })
 export class BranchListComponent implements OnInit {
+  branches?: IBranch[]
+  isRead = false;
 
-  constructor(private branchService:BranchService) { }
+  constructor(private branchService: BranchService) {
+  }
 
   ngOnInit(): void {
     this.getAll();
   }
-  getAll(){
-    this.branchService.getAllBranches();
+
+  getAll() {
+    this.branches = this.branchService.getAllBranches();
+    this.isRead = true;
+    console.log(this.branches)
   }
 
 }

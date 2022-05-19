@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+
+
+  .line {
+    &.current {
+      height: 5px;
+      width: 100%;
+      top: 100%;
+      position: absolute;
+      border-radius: 10px;
+      background: darkblue;
+      transition: all ease-in-out .2s;
+    }
+  }
+}
+

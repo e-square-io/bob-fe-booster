@@ -1,0 +1,14 @@
+<div class="preview">
+  <ng-container *ngIf="current;else noPreviewTemplate">
+    <div class="name">{{current.name}}</div>
+    <div class="img">
+      <img [src]="current.img" [alt]="current.name">
+    </div>
+    <div class="address">{{current.address|address}}</div>
+  </ng-container>
+
+
+</div>
+<ng-template #noPreviewTemplate>
+  No Branch to preview
+</ng-template>
