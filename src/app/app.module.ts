@@ -10,6 +10,10 @@ import { CounterModule } from './counter/counter.module';
 import { CardModule } from './card/card.module';
 import { HighlightModule } from './highlight/highlight.module';
 import {FeedModule} from "./feed/feed.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from "./app-routing.module";
+import {BranchModule} from "./branch/branch.module";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import {FeedModule} from "./feed/feed.module";
     CounterModule,
     CardModule,
     HighlightModule,
-    FeedModule
+    FeedModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    BranchModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

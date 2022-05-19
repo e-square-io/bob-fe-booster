@@ -3,7 +3,7 @@ export interface IPrice {
   currency: 'ILS' | 'USD' | 'EUR';
 }
 
-export interface IItem {
+export interface IProduct {
   id?: string;
   name?: string;
   url?: string;

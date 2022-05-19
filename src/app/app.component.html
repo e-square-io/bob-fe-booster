@@ -2,8 +2,7 @@
 <app-side-bar #sidebar></app-side-bar>
 <div class="body" (click)="sidebar.hello()">
 <!--  <button (click)="someToggle = !someToggle">{{who}}</button>-->
-
-  <app-feed></app-feed>
+  <router-outlet></router-outlet>
 
   <!--  <ng-container *ngIf="someToggle">-->
 <!--    <div class="name">-->

@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
+import {AppService} from "../app.service";
 
 
 @Component({
   selector: 'app-nav-bar',
-  template: `
-{{name}}
+  template: ` Hello
+{{userName}}!
   `,
   styles: [`
 :host{
@@ -13,30 +14,10 @@ import {Component} from '@angular/core';
   `]
 })
 export class NavBarComponent {
-  numbers: number[] = [];
-  name?: string;
-  user={
-    name:undefined,
-    password:'undefined'
-  }
-  password?: string;
-  result = 0;
-  inputType = 'text';
-  passwordType = 'password';
-  constructor() {
-    this.name = 'yonatan1';
-    for (let i = 1; i < 10; i++) {
-      this.numbers.push(i);
-    }
-    this.numbers.push(0);
-
+  userName?:string;
+  constructor(private appService:AppService) {
+    this.userName = this.appService.userName;
   }
 
-  onKeyUp(event:KeyboardEvent,num:number){
-    console.log(event);
-  }
-  togglePassword():void{
-    this.passwordType = this.passwordType === 'password' ? 'text' : 'password';
-  }
 
 }

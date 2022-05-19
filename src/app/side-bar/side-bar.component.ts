@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AppService} from "../app.service";
 
 @Component({
   selector: 'app-side-bar',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
+  userName?:string = this.appService?.userName;
 
-  constructor() { }
+  constructor(private appService: AppService) {
+  }
 
   ngOnInit(): void {
   }
@@ -15,6 +18,10 @@ export class SideBarComponent implements OnInit {
 
   hello() {
     console.log('hello');
-    
+
+  }
+
+  loginUser() {
+    this.appService.userName = 'Hila'
   }
 }

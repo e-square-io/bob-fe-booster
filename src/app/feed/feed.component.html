@@ -3,9 +3,25 @@
 
 <div class="product-list">
 
-  <app-prodcut *ngFor="let product of products"
-               [product]="product">
-
-  </app-prodcut>
+  <app-product *ngFor="let product of products"
+               [product]="product"
+               (addToCart)="addToCart($event)">
+    <div class="title">Title</div>
+  </app-product>
 
 </div>
+<div class="cart product-list">
+  <app-product *ngFor="let product of productCart"
+               [product]="product"
+               [isCart]="true"
+               (removeFromCart)="removeFromCart($event)"
+               >
+
+  </app-product>
+
+  <div class="no-product" *ngIf="productCart.length === 0">
+    Empty Cart
+  </div>
+</div>
+
+<!--<button class="reset-cart" #resetCartButton>Reset</button>-->
