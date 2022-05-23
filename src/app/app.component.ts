@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
 import { Card } from './card/card';
 
@@ -21,6 +22,10 @@ export class AppComponent {
   someToggle = false;
   name = 'Roee';
   who:string ='Who is up';
+
+  constructor(private authSerivce: AuthService) {
+    this.authSerivce.setUser('Eliran');
+  }
 
   onCountChange(count: number): void {
     console.log('got count event', count);

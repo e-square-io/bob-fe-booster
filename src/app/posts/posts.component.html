@@ -1,0 +1,20 @@
+<div class="buttons">
+  <button (click)="showAll()">Show All</button>
+</div>
+
+<ng-container *ngIf="comments.length > 0">
+  <ng-container *ngFor="let comment of comments">
+    {{ comment.email }}
+    <hr />
+  </ng-container>
+</ng-container>
+
+<ng-container *ngFor="let post of results">
+  <div class="post">
+    <div class="title">Title: {{ post.title }}</div>
+    <div class="body">Body: {{ post.body }}</div>
+
+    <button (click)="showComments(post.id)">Show Comments</button>
+  </div>
+  <hr />
+</ng-container>
