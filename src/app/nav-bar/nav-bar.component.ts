@@ -10,11 +10,15 @@ import { AppService } from "../app.service";
 <div style="display: flex; align-items:center justify-content:center;"> Hello {{userName}}!
 
 
-<ul>
+<ul style="display: flex;">
 
   
-  <li>
+  <li style="margin-right: 15px;">
     <a routerLink="/posts">Posts</a>
+  </li>
+
+  <li>
+    <a routerLink="/likes">Likes</a>
   </li>
 </ul>
 </div>

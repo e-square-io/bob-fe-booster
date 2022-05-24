@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'feed', pathMatch: 'full' },
   { path: 'feed', component: FeedComponent },
   { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
+  { path: 'likes', loadChildren: () => import('./likes/likes.module').then(m => m.LikesModule) },
 
 ];
 

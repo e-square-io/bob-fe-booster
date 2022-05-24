@@ -9,12 +9,13 @@
   </ng-container>
 </ng-container>
 
-<ng-container *ngFor="let post of results">
+<ng-container *ngFor="let post of results$ | async">
   <div class="post">
     <div class="title">Title: {{ post.title }}</div>
     <div class="body">Body: {{ post.body }}</div>
 
     <button (click)="showComments(post.id)">Show Comments</button>
+    <button (click)="likePost(post)">Like</button>
   </div>
   <hr />
 </ng-container>

@@ -17,6 +17,9 @@ import {BranchModule} from "./branch/branch.module";
 import {MatButtonModule} from "@angular/material/button";
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { AuthInterceptor } from './auth.interceptor';
     BrowserAnimationsModule,
     BranchModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AkitaNgRouterStoreModule
   ],
   providers: [
     {

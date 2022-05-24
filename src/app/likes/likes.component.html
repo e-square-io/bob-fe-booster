@@ -1,0 +1,10 @@
+<ng-container *ngIf="viewObs$ | async as viewObs">
+  My liked posts ({{ viewObs.numOfLikedPosts }}):
+
+  <ng-container *ngFor="let post of viewObs.likedPosts">
+    <div class="title">{{ post.title }}</div>
+    <div class="body">
+      {{ post.body }}
+    </div>
+  </ng-container>
+</ng-container>
