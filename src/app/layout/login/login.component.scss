@@ -1,19 +1,1 @@
-:host {
-  .wrapper {
-    display: grid;
-    place-content: center;
-    height: 40vh;
 
-    form {
-      width: 400px;
-      max-width: 80vw;
-    }
-
-    .actions {
-      display: grid;
-      place-content: center space-evenly;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-}

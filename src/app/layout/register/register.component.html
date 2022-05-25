@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  <div class="title">
+    <h2>{{title}}</h2></div>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+    <es-es-date-picker formControlName="startDate"></es-es-date-picker>
+    <div class="actions">
+
+      <button mat-raised-button color="primary">{{btn.submit|uppercase}}</button>
+      <button mat-stroked-button type="button" >{{btn.reset|uppercase}}</button>
+    </div>
+  </form>
+</div>
+
+{{formGroup.value|json}}

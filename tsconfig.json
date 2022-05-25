@@ -7,7 +7,6 @@
       "common": [
         "dist/common/common",
         "dist/common"
-
       ],
       "@es-common": [
         "projects/common/src/public-api.ts"
