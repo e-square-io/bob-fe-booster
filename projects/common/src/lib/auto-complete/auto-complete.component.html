@@ -1,1 +1,15 @@
-<p>auto-complete works!</p>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Number</mat-label>
+  <input type="text"
+         placeholder="Pick one"
+         aria-label="Number"
+         matInput
+         [formControl]="filterControl"
+         [matAutocomplete]="auto">
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option.common" (click)="pick(option)">
+      {{option.common}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

@@ -5,6 +5,7 @@
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
     <es-es-date-picker formControlName="startDate"></es-es-date-picker>
+    <es-auto-complete formControlName="country"></es-auto-complete>
     <div class="actions">
 
       <button mat-raised-button color="primary">{{btn.submit|uppercase}}</button>

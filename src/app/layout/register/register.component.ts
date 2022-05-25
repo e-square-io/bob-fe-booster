@@ -9,7 +9,8 @@ import {FormBuilder} from "@angular/forms";
 })
 export class RegisterComponent implements OnInit {
   formGroup = this.formBuilder.group({
-    startDate:[]
+    startDate:[],
+    country:[]
   });
   title = 'Register!';
   btn ={

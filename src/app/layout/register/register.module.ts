@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {RegisterComponent} from './register.component';
 import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
-import {EsDatePickerModule, EsInputModule} from "@es-common";
+import {AutoCompleteModule, EsDatePickerModule, EsInputModule} from "@es-common";
 import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
@@ -13,7 +13,8 @@ import {MatButtonModule} from "@angular/material/button";
     ReactiveFormsModule,
     EsInputModule,
     MatButtonModule,
-    EsDatePickerModule],
+    EsDatePickerModule,
+    AutoCompleteModule],
   declarations: [RegisterComponent]
 })
 export class RegisterModule {
