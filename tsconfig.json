@@ -3,6 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "common": [
+        "dist/common/common",
+        "dist/common"
+
+      ],
+      "@es-common": [
+        "projects/common/src/public-api.ts"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -21,7 +31,7 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

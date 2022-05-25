@@ -1,0 +1,39 @@
+<div class="wrapper">
+
+  <div class="title">
+    <h2>{{title}}</h2></div>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div>
+
+      <es-input
+        [label]="'User name'"
+        [placeholder]="'😜'"
+        [hint]="'Your secret user name'"
+        [name]="'User name'"
+        formControlName="username"
+      ></es-input>
+    </div>
+    <div>
+
+      <es-input
+        [label]="'Password'"
+        [placeholder]="'🔒'"
+        [hint]="'Your secret password'"
+        [name]="'Password'"
+        [type]="'password'"
+        [formControlName]="'password'"
+        [validators]="passwordValidators"
+      ></es-input>
+
+    </div>
+    <!--  <input type="text" formControlName="username">-->
+    <!--  <input type="text" formControlName="password">-->
+    <div class="actions">
+
+    <button mat-raised-button color="primary">{{btn.submit}}</button>
+    <button mat-stroked-button type="button" >{{btn.reset}}</button>
+    </div>
+  </form>
+</div>
+
+{{formGroup.value|json}}

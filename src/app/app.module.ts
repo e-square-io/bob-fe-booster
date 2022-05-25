@@ -20,6 +20,7 @@ import { AuthInterceptor } from './auth.interceptor';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
+import {LayoutModule} from "./layout/layout.module";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { environment } from '../environments/environment';
     MatButtonModule,
     HttpClientModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule
+    AkitaNgRouterStoreModule,
+    LayoutModule
   ],
   providers: [
     {
